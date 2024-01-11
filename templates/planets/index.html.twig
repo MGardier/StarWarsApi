@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Star Wars Api - Personnages
+{% endblock %}
+
+
+{% block body %}
+
+	{% for planet in pagination %}
+		<article>
+			<a href="{{ path( 'app_planet', { 'id': planet.url|replace({'https://swapi.dev/api/planets/':'','/':''}) } )}}">{{ planet.name }}</a>
+		</article>
+
+	{% endfor %}
+	<div class="pagination">
+		{{ knp_pagination_render(pagination) }}
+	</div>
+{% endblock %}

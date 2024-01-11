@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ starship.name }}
+{% endblock %}
+
+
+{% block body %}
+
+	<article>
+		<header>
+			{{ starship.name  }}
+		</header>
+		<ul>
+			<li>
+				Modéle :
+				{{ starship.model }}</li>
+
+			<li>
+				Manufacture :
+				{{ starship.manufacturer }}</li>
+			<li>
+				Coût en crédit :
+				{{ starship.cost_in_credits }}</li>
+
+			<li>
+				Taille :
+				{{ starship.length }}</li>
+
+			<li>
+				Vitesse atmosphérique max :
+				{{ starship.max_atmosphering_speed }}</li>
+
+			<li>
+				Equipage :
+				{{ starship.crew }}</li>
+
+			<li>
+				Passegers :
+				{{ starship.passengers }}</li>
+			<li>
+				Capacité de stockage :
+				{{ starship.cargo_capacity }}</li>
+
+
+		</ul>
+	</article>
+{% endblock %}

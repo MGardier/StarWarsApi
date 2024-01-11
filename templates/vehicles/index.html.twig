@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Star Wars Api - Véhicules
+{% endblock %}
+
+
+{% block body %}
+
+	{% for vehicle in pagination %}
+		<article>
+			<a href="{{ path( 'app_vehicle', { 'id': vehicle.url|replace({'https://swapi.dev/api/vehicles/':'','/':''}) } )}}">{{ vehicle.name }}</a>
+		</article>
+
+	{% endfor %}
+	<div class="pagination">
+		{{ knp_pagination_render(pagination) }}
+	</div>
+{% endblock %}

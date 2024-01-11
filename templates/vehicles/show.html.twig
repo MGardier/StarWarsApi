@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ vehicle.name }}
+{% endblock %}
+
+
+{% block body %}
+
+	<article>
+		<header>
+			{{ vehicle.name  }}
+		</header>
+		<ul>
+			<li>
+				Modéle :
+				{{ vehicle.model }}</li>
+
+			<li>
+				Manufacture :
+				{{ vehicle.manufacturer }}</li>
+			<li>
+				Coût en crédit :
+				{{ vehicle.cost_in_credits }}</li>
+
+			<li>
+				Taille :
+				{{ vehicle.length }}</li>
+
+			<li>
+				Vitesse atmosphérique max :
+				{{ vehicle.max_atmosphering_speed }}</li>
+
+			<li>
+				Equipage :
+				{{ vehicle.crew }}</li>
+
+			<li>
+				Passegers :
+				{{ vehicle.passengers }}</li>
+			<li>
+				Capacité de stockage :
+				{{ vehicle.cargo_capacity }}</li>
+
+
+		</ul>
+	</article>
+{% endblock %}

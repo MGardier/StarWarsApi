@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ planet.name }}
+{% endblock %}
+
+
+{% block body %}
+
+	<article>
+		<header>
+			{{ planet.name  }}
+		</header>
+		<ul>
+			<li>
+				Diamétre :
+				{{ planet.diameter }}</li>
+
+			<li>
+				Climat :
+				{{ planet.climate }}</li>
+			<li>
+				Gravitée :
+				{{ planet.gravity }}</li>
+
+			<li>
+				Type de terrain :
+				{{ planet.terrain }}</li>
+
+			<li>
+				Population :
+				{{ planet.population }}</li>
+
+		</ul>
+	</article>
+{% endblock %}
